@@ -57,9 +57,9 @@ class _HomeState extends State<Home> {
                         '$imageBaseUrl${snapshot.data.results[index].posterPath}',
                     title: '${snapshot.data.results[index].title}',
                     date: '${snapshot.data.results[index].releaseDate}',
-                    voteAverage: '${snapshot.data.results[index].voteAcerage}',
+                    voteAverage: '${snapshot.data.results[index].voteAverage}',
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                      return Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => MovieDetail(
                                 movie: snapshot.data.results[index],
                               )));
